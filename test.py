@@ -1,10 +1,17 @@
-import heapq
+from collections import deque
 
-nums = [1, 4, 3, 2, 5, 6, 7, 3, 2]
-pq = []
-for i in nums:
-    heapq.heappush(pq, i)
-print(pq)
-for i in range(len(nums)):
-    heapq.heappop(pq)
-    print(pq)
+queue = deque()
+queue.append(1)
+queue.append(2)
+queue.append(3)
+
+print(queue)
+
+queue.popleft()
+print(queue)
+
+queue.popleft()
+print(queue)
+
+queue.popleft()
+print(queue)
